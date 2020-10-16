@@ -1,0 +1,135 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, .4);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .4s;
+
+    &--show {
+        z-index: 100;
+        opacity: 1;
+    }
+
+    &--dark {
+        z-index: 100;
+        opacity: 1;
+        background-color: rgba(#383E41, .9);
+    }
+}
+
+.popup {
+    position: relative;
+    background-color: #fff;
+    width: 390px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        svg {
+            width: 100%;
+            fill: #f6f6f6;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        width: 250px;
+    }
+
+    &__close {
+        position: absolute;
+        right: -70px;
+        top: 0;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 24px;
+        line-height: 1.3em;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #383E41;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--1,
+        &--2 {
+            .popup__icon {
+                min-width: 30px;
+                min-height: 30px;
+                border-radius: 50%;
+                background-color: $grey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width: 12px;
+                    height: 14px;
+                }
+            }
+        }
+
+        &--2 {
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+
+    &__input {
+        padding-left: 15px;
+        display: inline-block;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__wrap {
+        width: 80%;
+        margin-left: 13px;
+    }
+
+    &__block {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        &--correct {
+            margin-top: 10px;
+        }
+    }
+}

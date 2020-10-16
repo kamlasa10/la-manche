@@ -1,0 +1,47 @@
+.preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include to(480px) {
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 72%;
+        margin-right: 15px;
+
+        @include to(1370px) {
+            width: 78%;
+        }
+
+        @include to(480px) {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .popup__close {
+        position: static;
+        order: 1;
+        margin-top: 40px;
+        align-self: flex-start;
+        background-color: #fff;
+
+        @include to(1600px) {
+            margin-top: 0;
+        }
+
+        @include to(480px) {
+            order: -1;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: 15px;
+        }
+    }
+}

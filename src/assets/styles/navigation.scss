@@ -1,0 +1,41 @@
+.navigation {
+    margin-right: 38px;
+
+    &__link {
+        display: block;
+        padding: 2px 35px;
+        padding-right: 25px;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 3.5em;
+        text-transform: uppercase;
+        color: $grey;
+        font-weight: 500;
+        background-color: transparent;
+        transition: all .4s;
+
+        @include to(1370px) {
+            font-size: 10px;
+            line-height: 3.5em;
+        }
+
+        @include to(480px) {
+            font-size: 12px;
+            min-width: 130px;
+            line-height: 3em;
+            display: inline-flex;
+            padding-right: 20px;
+        }
+
+        &:hover {
+            background-color: $grey;
+            color: #fff;
+        }
+
+        &--active {
+            background-color: $grey;
+            color: #fff;
+            transition: all .4s;
+        }
+    }
+}

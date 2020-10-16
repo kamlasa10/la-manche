@@ -1,0 +1,129 @@
+.header {
+	z-index: 50;
+	padding-top: 30px;
+	width: 236px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	left: 0;
+
+	@include to(770px) {
+		left: 0;
+		right: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 14px 22px;
+		height: auto;
+		justify-content: space-between;
+	}
+
+	@include to(480px) {
+		padding: 12px 14px;
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		height: 92%;
+		padding-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		transition: all .7s;
+
+		@include to(770px) {
+			position: absolute;
+			height: 100vh;
+			top: 0;
+			width: 236px;
+			padding-top: 29px;
+			left: -100vh;
+			background-color: #fff;
+			z-index: 200;
+		}
+
+		@include to(320px) {
+			overflow-y: scroll;
+		}
+
+		&--show {
+			left: 0;
+			transition: all .5s;
+		}
+
+		.burger {
+			margin-bottom: 40px;
+			padding-left: 29px;
+
+			@include to(480px) {
+				margin-bottom: 24px;
+			}
+
+			&__btn {
+				width: 30px;
+				height: 32px;
+			}
+		}
+	}
+
+	&__logo {
+		margin-left: 38px;
+		margin-right: 38px;
+		margin-bottom: 38px;
+
+		img {
+			width: 160px;
+			height: 35px;
+
+			@include to(480px) {
+				width: 128px;
+			}
+		}
+
+		@include to(770px) {
+			margin: 0;
+		}
+	}
+
+	&__socials {
+		margin-top: auto;
+		margin-bottom: 32px;
+		margin-left: 25px;
+	}
+
+	&__navigation {
+		@include to(360px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__decor {
+		position: absolute;
+		right: -39%;
+		bottom: -7px;
+		width: 187px;
+		height: 210px;
+
+		@include to(480px) {
+			width: 130px;
+			height: 158px;
+			right: -27%;
+		}
+
+		@include to(420px) {
+			bottom: -1%;
+		}
+
+		svg {
+			fill: $grayFirm;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__builder {
+		width: 40%;
+		margin-left: 25px;
+	}
+}

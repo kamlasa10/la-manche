@@ -1,0 +1,434 @@
+extends ../layout/main
+	
+block meta
+	title= 'ЖК LaManche'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM")
+	script(src='./assets/scripts/index.js')
+block content
+	section(class="main section" id="main")
+		.main__right-slider
+			.main__right-slider-left
+				.main__right-slider-left-block
+					button(type="button" class="main__right-slider-left-btn slider-control slider-control--left main__right-slider-left-btn--left")
+						+svg('arrow')
+				.main__right-slider-left-block
+					button(type="button" class="main__right-slider-left-btn slider-control slider-control--right main__right-slider-left-btn--right")
+						+svg('arrow')
+			.main__right-slider-content
+				.main__right-slider-current 01
+				.main__right-slider-content-wrap
+					.main__right-slider-content-item
+						img(src="" alt="photo")
+		a(href="#about" class="main__scroll hash-link")
+			+svg('scroll')
+		.main__wrap
+			.main__item
+				.main__left
+					+img('main-bg.jpg')
+				.main__right
+					.main__right-contacts
+						a(href="tel:0442994966" class="main__phone") (044) 29 949 66
+							+svg('mobile-phone')
+						button(type="button" data-modal-open="true" class="btn main__btn") Зворотній зв’язок
+							+svg('wave')
+					.main__right-wrap
+						.main__right-intro
+							h1.main__right-title будинок з манерами на Подолі
+							.main__right-intro-wrap
+								p.main__right-desc  Клубний будинок LA MANCHE - досконалість та естетичність у кожній деталі
+								a(href="#about" class="main__right-btn btn hash-link") Дізнатися більше
+									+svg('wave')
+			.main__item
+				.main__left
+					+img('main-bg2.jpg')
+				.main__right
+					.main__right-contacts
+						a(href="tel:0442994966" class="main__phone") (044) 29 949 66
+						button(type="button" data-modal-open="true" class="btn main__btn") Зворотній зв’язок
+							+svg('wave')
+					.main__right-wrap
+						.main__right-intro
+							h1.main__right-title будинок з манерами на Подолі
+							p.main__right-desc  Клубний будинок LA MANCHE - досконалість та естетичність у кожній деталі
+							.main__right-intro-wrap
+								a(href="#about" class="main__right-btn btn hash-link") Дізнатися більше
+									+svg('wave')
+	section(class="about section" id="about")
+		.container
+			.about__content
+				.section-title Філософія проєкту
+				.about__list
+					.about__item 
+						.about__desc <b>Історичний центр столиці вирізняється своєю атмосферою.</b> Тут сплітаються в одне досвід і перспективність, мудрість і драйвовість, автентичність і трендовість. Клубний будинок LA MANCHE стане одним із містків між стриманим минулим та інноваційним майбутнім.
+					.about__item.about__item--correct 
+						.about__desc <b>LA MANCHE Perfect Residence — престижний будинок клубного типу на Подолі.</b> Він має 9 поверхів, індивідуальні тераси на даху, комерційні приміщення на перших поверхах та підземний паркінг.
+					.about__item 
+						.about__desc LA MANCHE розширить архітектурний ряд Подолу, додавши власного стилю з елементами модерну Англії та Франції кінця ХІХ – початку ХХ сторіч. Цей будинок покликаний стати новою окрасою району!
+					.about__item.about__item--correct 
+						.about__desc Територія внутрішнього двору створює незвичне для великого міста відчуття затишку, а оригінальні архітектурні рішення роблять простір неповторним і натхненним. Розташування неподалік берега Дніпровської гавані — додаткова перевага LA MANCHE, яку оцінять усі мешканці.
+	section(class="features section" id="features")
+		.features__wrap
+			.features__block
+				.features__item.features__item--1
+					.features__title Атмосфера Подолу
+					.features__desc Головна культурно-історична локація столиці: поблизу розмаїття галерей мистецтв, творчих просторів, концептуальних закладів
+					.features__info
+						.features__info-total 
+						.features__info-current 
+			.features__block
+				.features__item.features__item--2
+					.features__title Унікальна архітектура
+					.features__desc Стиль будинку з елементами модерну Англії та Франції кінця ХІХ – початку ХХ сторіч стане новим акцентом Старого міста 
+					.features__info
+						.features__info-total 
+						.features__info-current
+			.features__block
+				.features__item.features__item--3
+					.features__title Набережна Дніпра
+					.features__desc Місце для повного релаксу,  набратися сил і натхнення поруч з тихою водою
+					.features__info
+						.features__info-total 
+						.features__info-current
+			.features__block
+				.features__item.features__item--4
+					.features__title Ландшафтний парк
+					.features__desc Максимально затишний простір із власним сквером, алеями, зонами відпочинку, дитячими майданчиками
+					.features__info
+						.features__info-total 
+						.features__info-current
+			.features__block
+				.features__item.features__item--5
+					.features__title Сервіс для автовласників
+					.features__desc Підземний та гостьовий паркінги
+					.features__info
+						.features__info-total 
+						.features__info-current
+	section(class="gallery section" id="gallery")
+		div(class="gallery-info-slide slide-control")
+			+svg('arrow')
+		.gallery__controls
+			button(type="button" class="gallery__right-slider-left-btn slider-control slider-control--left gallery__right-slider-left-btn--left")
+				+svg('arrow')
+			button(type="button" class="gallery__right-slider-left-btn slider-control slider-control--right gallery__right-slider-left-btn--right")
+				+svg('arrow')
+		.gallery__wrap
+			.gallery__item
+				.gallery__img
+					+img('gallery-img.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img2.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img3.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img4.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img5.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img6.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img7.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img8.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img9.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item
+				.gallery__img
+					+img('gallery-img10.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item.gallery__item--correct
+				.gallery__img
+					+img('main-bg.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+			.gallery__item.gallery__item--correct
+				.gallery__img
+					+img('main-bg2.jpg')
+				.features__info
+					.features__info-total 
+					.features__info-current
+	section(class="view section" id="view")
+		.container
+			.view__content
+				.view__content-top
+					h2.view__heading.section-title Планування
+					.view__content-top-controls
+						button(type="button" class="view__control view__control--left slider-control slider-control--left")
+							+svg('arrow')
+						button(type="button" class="view__control view__control--right slider-control slider-control--right")
+							+svg('arrow')
+				.view__wrap
+					div(class="view__item" data-view-full="assets/images/view-img2-full.jpg")
+						.view__item-wrap
+							.view__img
+								+img('view-img2.jpg')
+							.view__title Тип 3-А<br> 2-7 поверх
+							.view__info
+								.view__info-item Загальна площа: <b>109,34 м2</b>
+								.view__info-item Житлова площа: <b>58,00 м2</b>
+							.view__block
+								a(href="assets/images/view-img2-full.jpg" download class="view__link btn") PDF
+									+svg('wave')
+					div(class="view__item" data-view-full="assets/images/view-img3-full.jpg")
+						.view__item-wrap
+							.view__img
+								+img('view-img3.png')
+							.view__title Тип 2-Б<br> 2-7 поверх
+							.view__info
+								.view__info-item Загальна площа: <b>76,55 м2</b>
+								.view__info-item Житлова площа: <b>34,92 м2</b>
+							.view__block
+								a(href="#" class="view__link btn") PDF
+									+svg('wave')
+					div(class="view__item" data-view-full="assets/images/view-img4-full.jpg")
+						.view__item-wrap
+							.view__img
+								+img('view-img4.jpg')
+							.view__title Тип 1-А<br> 2-7 поверх
+							.view__info
+								.view__info-item Загальна площа: <b>48,43 м2</b>
+								.view__info-item Житлова площа: <b>19,24 м2</b>
+							.view__block
+								a(href="#" class="view__link btn") PDF
+									+svg('wave')
+					div(class="view__item" data-view-full="assets/images/view-img5-full.jpg")
+						.view__item-wrap
+							.view__img
+								+img('view-img5.jpg')
+							.view__title Тип 1-Б<br> 2-7 поверх
+							.view__info
+								.view__info-item Загальна площа: <b>48,65 м2</b>
+								.view__info-item Житлова площа: <b>19,38 м2</b>
+							.view__block
+								a(href="#" class="view__link btn") PDF
+									+svg('wave')
+					div(class="view__item" data-view-full="assets/images/view-img6-full.jpg")
+						.view__item-wrap
+							.view__img
+								+img('view-img6.jpg')
+							.view__title Тип 2-А<br> 2-7 поверх
+							.view__info
+								.view__info-item Загальна площа: <b>83.55 м2</b>
+								.view__info-item Житлова площа: <b>34,90 м2</b>
+							.view__block
+								a(href="#" class="view__link btn") PDF
+									+svg('wave')
+	section(class="building section" id="building")
+		.container
+			.building__content
+				.view__content-top
+					h2.view__heading.section-title Хід будівництва
+					.view__content-top-controls
+						button(type="button" class="building__control building__control--left slider-control slider-control--left")
+							+svg('arrow')
+						button(type="button" class="building__control building__control--right slider-control slider-control--right")
+							+svg('arrow')
+				.building__wrap
+					div(class="building__item" data-month="september")
+						.building__img
+							+img('building/september/building-img.jpg')
+						.building__info
+							.building__title Звіт будівництва за
+							.building__date 22 вересня 2020 р
+							+svg('decor-icon')
+					//- div(class="building__item" data-month="october")
+					//- 	.building__img
+					//- 		+img('building/building-img.jpg')
+					//- 	.building__info
+					//- 		.building__title Звіт будівництва за
+					//- 		.building__date 11 вересня 2020 р
+					//- 		+svg('decor-icon')
+					//- div(class="building__item" data-month="november")
+					//- 	.building__img
+					//- 		+img('building/building-img.jpg')
+					//- 	.building__info
+					//- 		.building__title Звіт будівництва за
+					//- 		.building__date 11 вересня 2020 р
+					//- 		+svg('decor-icon')
+	section(class="contacts section" id="contacts")
+		.container
+			.contacts__wrap
+				.contacts__left
+				.contacts__right
+					.contacts__right-top
+						.contacts__right-top-wrap
+							+svg('decor-icon').contacts__right-top-icon
+						.popup__content
+							.popup__title Виникли запитання?
+							.popup__wrap
+								form(action="#" method="post" data-form="form").popup__wrap-content
+									.popup__item.popup__item--1
+										.popup__icon
+											+svg('user')
+										input(type="text" name="name" class="popup__input" placeholder="Ім’я:")
+									.popup__item.popup__item--2
+										.popup__icon
+											+svg('phone')
+										input(type="text" name="phone" data-phone="true" class="popup__input" placeholder="Телефон:")
+								.popup__block
+									button(type="submit" class="submit__form popup__btn btn") Надіслати
+										+svg('wave')
+					.contacts__right-bottom
+						.contacts__right-bottom-item
+							.contacts__right-bottom-title Відділ продажу:
+							.contacts__right-bottom-desc м. Київ вул. Щекавицька, 46 <br> 
+							a(href="tel:+380442994966" class="contacts__right-bottom-link") +38 (044) 299 49 66
+						.contacts__right-bottom-item
+							.contacts__right-bottom-title Графік роботи відділу продажу:
+							.contacts__right-bottom-desc Пн-Пт: 9:00 - 20:00<br> 
+								span Сб-Нд: 10:00 - 17:00<br>
+						.contacts__copyright 
+							a(href="https://smarto.agency/")
+								+img('smarto.svg')
+
+	.overlay
+		div(data-modal="modal" class="record" data-record="september")
+			.record__top
+				.record__date 22.09.2020
+				.record__block
+					button(type="button" class="popup__close record__close close")
+						+svg('close')
+			.record__controls
+				.record__control-block
+					button(type="button" class="record__control record__control--left slider-control slider-control--left")
+						+svg('arrow')
+				.record__control-block--right
+					button(type="button" class="record__control record__control--right slider-control slider-control--right")
+						+svg('arrow')
+			.record__content
+				.record__wrap
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img2.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img3.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img4.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img5.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img6.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img7.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img8.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img9.jpg")
+					.record__item
+						img(data-lazy="./assets/images/building/september/building-img10.jpg")
+		//- div(data-modal="modal" class="record" data-record="october")
+		//- 	.record__top
+		//- 		.record__date 11 Ноября 2020 р
+		//- 		.record__block
+		//- 			button(type="button" class="popup__close record__close close")
+		//- 				+svg('close')
+		//- 	.record__controls
+		//- 		.record__control-block
+		//- 			button(type="button" class="record__control record__control--left slider-control slider-control--left")
+		//- 				+svg('arrow')
+		//- 		.record__control-block--right
+		//- 			button(type="button" class="record__control record__control--right slider-control slider-control--right")
+		//- 				+svg('arrow')
+		//- 	.record__content
+		//- 		.record__wrap
+		//- 			.record__item
+		//- 				+img('building/september/building-img.jpg')
+		//- 			.record__item
+		//- 				+img('building/september/building-img.jpg')
+		//- 			.record__item
+		//- 				+img('building/september/building-img.jpg')
+		//- div(data-modal="modal" class="record" data-record="november")
+			.record__top
+				.record__date 12 Ноября 2020 р
+				.record__block
+					button(type="button" class="popup__close record__close close")
+						+svg('close')
+			.record__controls
+				.record__control-block
+					button(type="button" class="record__control record__control--left slider-control slider-control--left")
+						+svg('arrow')
+				.record__control-block--right
+					button(type="button" class="record__control record__control--right slider-control slider-control--right")
+						+svg('arrow')
+			.record__content
+				.record__wrap
+					.record__item
+						+img('building/september/building-img.jpg')
+					.record__item
+						+img('building/september/building-img.jpg')
+					.record__item
+						+img('building/september/building-img.jpg')
+		div(class="preview" data-modal="modal")
+			button(type="button" class="popup__close preview__close close")
+				+svg('close')
+			.preview__img
+				img(src="" alt="photo" class="preview__img")
+		div(data-modal="popup").popup-callback.popup
+			.popup__decor
+				+svg('decor-icon')
+			button(type="button" class="popup__close close")
+				+svg('close')
+			.popup__content
+				.popup__title Виникли запитання?
+				form(action="#" method="post" data-form="form").popup__wrap
+					.popup__item.popup__item--1
+						.popup__icon
+							+svg('user')
+						input(type="text" name="name" class="popup__input" placeholder="Ім’я:")
+					.popup__item.popup__item--2
+						.popup__icon
+							+svg('phone')
+						input(type="text" name="phone" data-phone2="true" class="popup__input" placeholder="Телефон:")
+					.popup__block
+						button(type="submit" class="submit__form popup__btn--correct popup__btn btn") Надіслати
+							+svg('wave')
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

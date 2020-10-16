@@ -1,0 +1,25 @@
+.slider-control {
+    border: none;
+    background-color: transparent;
+    width: 37px;
+    height: 17px;
+    cursor: pointer !important;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        stroke: $grey;
+        transition: all .4s;
+        stroke-width: 2px;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &--left {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+}

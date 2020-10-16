@@ -1,0 +1,149 @@
+.features {
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+
+    
+    &--animated {
+        z-index: 0;
+    }
+
+    @include to(770px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: auto;
+    }
+
+    @include to(480px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__wrap {
+        min-height: 100vh;
+        margin-left: 236px;
+        
+        @include to(770px) {
+            margin-left: 0;
+        }
+    }
+
+    &__title {
+        width: 200px;
+        font-size: 24px;
+        line-height: 1.3em;
+        margin-right: 30px;
+
+        @include to(480px) {
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+    }
+
+    &__block {
+        height: 100vh;
+        padding: 0 10px;
+
+        @include to(770px) {
+            padding: 0;
+        }
+    }
+
+    &__desc {
+        width: 19vw;
+
+        @include to(770px) {
+            width: 38vw;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        @include to(480px) {
+            font-size: 12px;
+            width: 60vw;
+            line-height: 1.5em;
+        }
+    }
+
+    &__item {
+        position: relative;
+        height: 100%;
+        display: flex !important;
+        justify-content: space-between;
+        padding-top: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include to(770px) {
+            padding-right: 20px;
+        }
+
+        @include to(480px) {
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &--1 {
+            background: url('../images/features-img.jpg') no-repeat center/cover;
+        }
+
+        &--2 {
+            color: #fff;
+            background: url('../images/main-bg2.jpg') no-repeat center/cover;
+        }
+
+        &--3 {
+            .features__title {
+                color: #fff;
+            }
+
+            background: url('../images/features-img3.jpg') no-repeat center/cover;
+        }
+
+        &--4 {
+            color: #fff;
+            background: url('../images/features-img4.jpg') no-repeat center/cover;
+        }
+
+        &--5 {
+            color: #fff;
+            background: url('../images/features-img5.jpg') no-repeat center/cover;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        color: #fff;
+
+        @include to(360px) {
+            right: 17px;
+        }
+
+        &-total {
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 1em;
+            text-transform: uppercase;
+            text-align: right;
+
+            @include to(1370px) {
+                font-size: 12px;
+            }
+        }
+
+        &-current {
+            font-size: 144px;
+            line-height: .7em;
+            text-transform: uppercase;
+
+            @include to(1370px) {
+                font-size: 72px;
+                line-height: 0.7em;
+            }
+        }
+    }
+}

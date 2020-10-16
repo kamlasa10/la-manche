@@ -1,0 +1,38 @@
+.burger
+	button(type="button" class="burger__btn burger__btn--open")
+		+svg('menu')
+	.burger__text.burger__text--header Меню
+.header__logo
+	a(href="#main" class="hash-link")
+		+img('logo.svg')
+.header__content
+	.burger
+		button(type="button" class="burger__btn burger__btn--close")
+			+svg('close')
+		.burger__text Меню
+	.header__decor
+		+svg('decor-icon')
+	nav.navigation.header__navigation
+		ul.navigation__list
+			li.navigation__item
+				a(href="#main" class="navigation__link navigation__link--active hash-link") Головна
+			li.navigation__item
+				a(href="#about" class="navigation__link hash-link") Про проект
+			li.navigation__item
+				a(href="#features" class="navigation__link hash-link") Переваги
+			li.navigation__item
+				a(href="#gallery" class="navigation__link hash-link") Галерея
+			li.navigation__item
+				a(href="#view" class="navigation__link hash-link") Планування
+			li.navigation__item
+				a(href="#building" class="navigation__link hash-link") Хід будівництва
+			li.navigation__item
+				a(href="#contacts" class="navigation__link hash-link") Контакти
+	.socials.header__socials
+		a(href="https://www.facebook.com/PerfectGroup.Ukraine/" class="socials__link socials__link--1")
+			+svg('fb')
+		a(href="https://t.me/perfectgroupdevelopment" class="socials__link socials__link--2")
+			+svg('telegram')
+	.header__builder
+		a(href="https://perfect-group.ua")
+			+img('perfect.svg')

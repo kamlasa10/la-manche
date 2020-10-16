@@ -1,0 +1,151 @@
+.row {
+	@include row-flex();
+}
+.page__inner {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	z-index: 30;
+	.page__content {
+		flex-grow: 1;
+	}
+	.page__footer-wrapper {
+		flex-shrink: 0;
+	}
+}
+
+.field__error-msg {
+	position: absolute;
+	bottom: -32px;
+	left: 0;
+	white-space: nowrap;
+}
+
+.section {
+	min-height: 100vh;
+	margin-left: 236px;
+
+	@include to(770px) {
+		margin-left: 0 !important;
+	}
+
+	@include to(480px) {
+		min-height: auto;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	&-title {
+		margin-bottom: 60px;
+		font-size: 30px;
+		line-height: 1.4em;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		@include to(770px) {
+			margin-bottom: 50px;
+		}
+
+		@include to(480px) {
+			font-size: 17px;
+			line-height: 1.6em;
+			margin-bottom: 20px;
+		}
+
+	}
+}
+
+.scroll {
+	animation-name: scroll;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+	animation-iteration-count: infinite;
+	transform-origin: 50% 20.5px;
+	will-change: transform, opacity;
+	opacity: 1;
+}
+
+@keyframes scroll {
+
+	0%, 20% {
+		transform: translateY(0) scaleY(1);
+	}
+
+	100% {
+		transform: translateY(36px) scaleY(2);
+		opacity: 0;
+	}
+
+}
+
+.noscroll{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll !important;
+    z-index: 10;
+ }
+
+ button,
+ a {
+	 cursor: pointer !important;
+ }
+
+ .decor__wrap {
+	position: fixed;
+	z-index: 51;
+	width: 236px;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+}
+
+.btn {
+	font-size: 22px;
+	line-height: 1em;
+	text-transform: uppercase;
+	padding: 0;
+	font-family: $defaultFonts;
+	color: $grey;
+	font-weight: 500;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer !important;
+	transition: all .4s;
+
+	@include to(1370px) {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	svg {
+		width: 34px;
+		height: 8px;
+		fill: none;
+		margin-left: 10px;
+		transition: all .4s;
+
+		@include to(1370px) {
+			width: 21px;
+			height: 6px;
+		}
+	}
+
+	&:hover {
+		svg {
+			transform: scale(1.2);
+			width: 39px;
+			height: 10px;
+
+			@include to(1370px) {
+				width: 26px;
+				height: 8px;
+			}
+		}
+	}
+}
